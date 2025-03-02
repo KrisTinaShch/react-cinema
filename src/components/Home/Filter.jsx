@@ -12,7 +12,7 @@ function Filter() {
                     {
                         filter__categoryes.map((categorye, index) =>
                         (
-                            <div onClick="changeActiveCategorySort(this)"
+                            <div onClick={() => changeStatus(categorye)}
                                 className={`filter__categoryes-item ${categorye === status ? 'active-category' :
                                     ''}`} key={index}>
                                 <p>{categorye}</p>
