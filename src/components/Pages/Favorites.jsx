@@ -1,19 +1,19 @@
 import FavoritesList from "../Favorites/FavoritesList";
 import Banner from "../Favorites/Banner";
-import Filter from "../Movies/Filter";
+import Filter from "../Filter/Filter";
 import MoviesList from "../Movies/MoviesList";
 import MoviesScroll from "../Movies/MoviesScroll";
 function Favorites() {
     return (
         <>
-            <Banner/>
+            <Banner />
             <div className="container">
                 <Filter />
                 <div className="favorites_movies">
-                  <FavoritesList/>
+                    <FavoritesList />
                     <MoviesList />
                 </div>
-                <MoviesScroll/>
+                <MoviesScroll />
             </div>
         </>
     )

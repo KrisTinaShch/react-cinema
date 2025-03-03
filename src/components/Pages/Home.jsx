@@ -1,6 +1,6 @@
 
 import Banner from '../Home/Banner'
-import Filter from '../Movies/Filter'
+import Filter from '../Filter/Filter'
 import MoviesList from '../Movies/MoviesList'
 import MoviesScroll from '../Movies/MoviesScroll';
 
@@ -11,7 +11,7 @@ function Home() {
             <div className="container">
                 <Filter />
                 <MoviesList />
-                <MoviesScroll/>
+                <MoviesScroll />
             </div>
         </>
     )
