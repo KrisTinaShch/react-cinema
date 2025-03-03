@@ -1,7 +1,8 @@
 
 import Banner from '../Home/Banner'
-import Filter from '../Home/Filter'
+import Filter from '../Movies/Filter'
 import MoviesList from '../Movies/MoviesList'
+import MoviesScroll from '../Movies/MoviesScroll';
 
 function Home() {
     return (
@@ -10,9 +11,7 @@ function Home() {
             <div className="container">
                 <Filter />
                 <MoviesList />
-                <div className="movies__scroll">
-                    <button><i className="fa-solid fa-arrow-down"></i></button>
-                </div>
+                <MoviesScroll/>
             </div>
         </>
     )

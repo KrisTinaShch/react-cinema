@@ -1,7 +1,8 @@
 import bladeRanner from "../../assets/Blade Runner 2049(2).jpg";
-import imageFilm from "../../assets/ImageFılm.jpg";
-import star from "../../assets/icons/star.png";
-import Filter from "../Home/Filter";
+import FavoritesList from "../Favorites/FavoritesList";
+import Filter from "../Movies/Filter";
+import MoviesList from "../Movies/MoviesList";
+import MoviesScroll from "../Movies/MoviesScroll";
 function Favorites() {
     return (
         <>
@@ -10,113 +11,12 @@ function Favorites() {
                 <img src={bladeRanner} alt="" />
             </div>
             <div className="container">
-                <Filter/>
+                <Filter />
                 <div className="favorites_movies">
-                    <div className="top-movies">
-                        <p>Top Rated Films</p>
-                        <div className="top-movies__card">
-                            <div className="top-movies__card-padding">
-                                <img src={imageFilm} alt="" />
-                                <div className="top-movies__card-info">
-                                    <div className="top-movies__card-info-title">
-                                        <p>Бегущий по лезвию 2049</p>
-                                        <p>Ридли Скотт</p>
-                                    </div>
-                                    <div className="top-movies__card-info-description">
-                                        <p>Film</p>
-                                        <p>2019</p>
-                                        <p>180m</p>
-                                        <p>9.1</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="top-movies__card">
-                            <div className="top-movies__card-padding">
-                                <img src={imageFilm} alt="" />
-                                <div className="top-movies__card-info">
-                                    <div className="top-movies__card-info-title">
-                                        <p>Бегущий по лезвию 2049</p>
-                                        <p>Ридли Скотт</p>
-                                    </div>
-                                    <div className="top-movies__card-info-description">
-                                        <p>Film</p>
-                                        <p>2019</p>
-                                        <p>180m</p>
-                                        <p>9.1</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="top-movies__card">
-                            <div className="top-movies__card-padding">
-                                <img src={imageFilm} alt="" />
-                                <div className="top-movies__card-info">
-                                    <div className="top-movies__card-info-title">
-                                        <p>Бегущий по лезвию 2049</p>
-                                        <p>Ридли Скотт</p>
-                                    </div>
-                                    <div className="top-movies__card-info-description">
-                                        <p>Film</p>
-                                        <p>2019</p>
-                                        <p>180m</p>
-                                        <p>9.1</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="top-movies__card">
-                            <div className="top-movies__card-padding">
-                                <img src={imageFilm} alt="" />
-                                <div className="top-movies__card-info">
-                                    <div className="top-movies__card-info-title">
-                                        <p>Бегущий по лезвию 2049</p>
-                                        <p>Ридли Скотт</p>
-                                    </div>
-                                    <div className="top-movies__card-info-description">
-                                        <p>Film</p>
-                                        <p>2019</p>
-                                        <p>180m</p>
-                                        <p>9.1</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="top-movies__card">
-                            <div className="top-movies__card-padding">
-                                <img src={imageFilm} alt="" />
-                                <div className="top-movies__card-info">
-                                    <div className="top-movies__card-info-title">
-                                        <p>Бегущий по лезвию 2049</p>
-                                        <p>Ридли Скотт</p>
-                                    </div>
-                                    <div className="top-movies__card-info-description">
-                                        <p>Film</p>
-                                        <p>2019</p>
-                                        <p>180m</p>
-                                        <p>9.1</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="movies">
-                        <a className="movies__card" href="/">
-                            <div className="movies__card-rating">
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                                <img src={star} alt="" />
-                            </div>
-                            <img src={imageFilm} alt="" />
-                        </a>
-
-                    </div>
+                  <FavoritesList/>
+                    <MoviesList />
                 </div>
-                <div className="movies__scroll">
-                    <button><i className="fa-solid fa-arrow-down"></i></button>
-                </div>
+                <MoviesScroll/>
             </div>
         </>
     )
