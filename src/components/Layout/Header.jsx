@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from "../../assets/icons/pngwing.com.png";
 import heart from "../../assets/icons/icons8-червы-100.png";
-import { Link } from "react-router-dom"
 
 function Header() {
     return (

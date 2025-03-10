@@ -10,7 +10,7 @@ function Home() {
             <Banner />
             <div className="container">
                 <Filter />
-                <MoviesList />
+                <MoviesList/>
                 <MoviesScroll />
             </div>
         </>

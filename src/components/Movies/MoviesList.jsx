@@ -1,11 +1,14 @@
+import { useContext} from "react";
 import MoviesCard from "./MoviesCard";
+import { FilmsContext } from "../../App";
 
 function MoviesList() {
-    let movieName = ["Звездный десант", "Чужой", "Аутсорс", "Бетмен"];
+    const films = useContext(FilmsContext);
+    
     return (
         <div id="movies" className="movies anchor">
-            {movieName.map((item, index) => (
-                <MoviesCard key={index} name={item} />
+            {films.map((item, index) => (
+                <MoviesCard key={index} {...item} />
             ))}
         </div>
     )
