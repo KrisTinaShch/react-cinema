@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from "../../assets/icons/pngwing.com.png";
 import heart from "../../assets/icons/icons8-червы-100.png";
 import { Link } from "react-router-dom"
@@ -14,7 +15,7 @@ function Header() {
             </Link>
             <ul className="header__navbar-flex">
                 <Link to="/">Home</Link>
-                <Link to="/favorites">Favorites</Link>
+                <Link to="favorites">Favorites</Link>
                 <a href="">Movies</a>
                 <a href="">Cartoon</a>
                 <a href="">Fantasy</a>
