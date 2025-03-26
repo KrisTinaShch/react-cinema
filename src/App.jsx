@@ -12,21 +12,21 @@ import store from './Redux/store'
 
 function App() {
 
-  useEffect(() => {
-    async function fetchFilms() {
-      await fetch("https://67c5bc26351c081993fb3899.mockapi.io/cinema/cinema-list")
-        .then(data => {
-          return data.json();
-        })
-        .then(data => {
-          changeFilms(data);
-        })
-        .catch(error => {
-          console.log(error);
-        })
-    }
-    fetchFilms();
-  }, [])
+  // useEffect(() => {
+  //   async function fetchFilms() {
+  //     await fetch("https://67c5bc26351c081993fb3899.mockapi.io/cinema/cinema-list")
+  //       .then(data => {
+  //         return data.json();
+  //       })
+  //       .then(data => {
+  //         changeFilms(data);
+  //       })
+  //       .catch(error => {
+  //         console.log(error);
+  //       })
+  //   }
+  //   fetchFilms();
+  // }, [])
 
   return (
     <>
