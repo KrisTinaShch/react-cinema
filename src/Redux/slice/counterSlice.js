@@ -9,7 +9,7 @@ const counterSlice = createSlice({
     reducers:{
         changeValue:(state)=>{
             console.log(state.value)
-            state.value = 5;
+            state.value += 5;
             console.log(state.value)
         }
     }

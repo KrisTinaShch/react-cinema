@@ -10,7 +10,6 @@ import { useState, useEffect, createContext } from 'react'
 import { Provider } from 'react-redux'
 import store from './Redux/store'
 
-export const FilmsContext = createContext();
 
 function App() {
 
@@ -37,7 +36,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <Provider store={store}>
-          {/* <FilmsContext.Provider value={films}> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favorites" element={<Favorites />} />
@@ -45,7 +43,6 @@ function App() {
             <Route path="*" element={<Home />} />
           </Routes>
         </Provider>
-        {/* </FilmsContext.Provider> */}
         <Footer />
       </BrowserRouter>
     </>
