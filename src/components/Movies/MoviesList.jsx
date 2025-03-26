@@ -1,3 +1,4 @@
+
 // import { useContext} from "react";
 // import MoviesCard from "./MoviesCard";
 // import { FilmsContext } from "../../App";
@@ -12,6 +13,5 @@ function MoviesList() {
     //         ))}
     //     </div>
     // )
-}
 
 export default MoviesList;

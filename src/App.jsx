@@ -10,10 +10,7 @@ import { useState, useEffect, createContext } from 'react'
 import { Provider } from 'react-redux'
 import store from './Redux/store'
 
-
 function App() {
-
-  const [films, changeFilms] = useState([]);
 
   useEffect(() => {
     async function fetchFilms() {
@@ -33,6 +30,7 @@ function App() {
 
   return (
     <>
+
       <BrowserRouter>
         <Header />
         <Provider store={store}>
