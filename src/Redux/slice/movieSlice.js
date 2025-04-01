@@ -18,12 +18,28 @@ export const fetchMovies = createAsyncThunk('movie/fetchmovies', async () => {
         throw error;
     }
 });
+
 const movieSlice = createSlice({
     name: "movie",
     initialState,
     reducers: {
 
-    }
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchMovies.pending, (state) => {
+                state.status = 'loading';
+            })
+            .addCase(fetchMovies.fulfilled, (state, action) => {
+                state.films = action.payload;
+                state.status = 'fulfilled';
+            })
+            .addCase(fetchMovies.rejected, (state, action) => {
+                state.status = 'error';
+                state.errors = action.error.message;
+                console.error(action.error.message)
+            })
+    },
 })
 
 export default movieSlice.reducer;
