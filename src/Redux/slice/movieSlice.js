@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+import axios from 'axios'
 const initialState = {
     films: [],
     status: null,
@@ -7,16 +7,34 @@ const initialState = {
 }
 
 export const fetchMovies = createAsyncThunk('movie/fetchmovies', async () => {
-    try {
-        const movies = await fetch("https://67c5bc26351c081993fb3899.mockapi.io/cinema/cinema-list");
-        if (!movies.ok) {
-            throw new Error('Error on server')
+
+    return axios.get("https://67c5bc26351c081993fb3899.mockapi.io/cinema/cinema-list")
+    .then((response)=>{
+        return response.data;
+    })
+    .catch((error)=>{
+        let errorMessage = '';
+        switch (error.response?.status) {
+            case 500:
+                errorMessage = 'Ошибочка'
+                break;
+        
+            default:
+                break;
         }
-        return movies.json();
-    } catch (error) {
-        console.log(error)
-        throw error;
-    }
+        console.log(error);
+        throw new Error(errorMessage);
+    })
+    // try {
+    //     const movies = await fetch("https://67c5bc26351c081993fb3899.mockapi.io/cinema/cinema-list");
+    //     if (!movies.ok) {
+    //         throw new Error('Error on server')
+    //     }
+    //     return movies.json();
+    // } catch (error) {
+    //     console.log(error)
+    //     throw error;
+    // }
 });
 
 const movieSlice = createSlice({
@@ -35,7 +53,7 @@ const movieSlice = createSlice({
                 state.status = 'fulfilled';
             })
             .addCase(fetchMovies.rejected, (state, action) => {
-                state.status = 'error';
+                state.status = 'loading';
                 state.errors = action.error.message;
                 console.error(action.error.message)
             })
