@@ -15,7 +15,7 @@ function Header() {
             <ul className="header__navbar-flex">
                 <Link to="/">Home</Link>
                 <Link to="favorites">Favorites</Link>
-                <a href="">Movies</a>
+                <Link to="movie">Movies</Link>
                 <a href="">Cartoon</a>
                 <a href="">Fantasy</a>
             </ul>
